@@ -84,5 +84,6 @@ Remotion has [separate licensing terms](https://www.remotion.dev/docs/license/pr
 - JSON imports containing image references without embedded image data will show a missing-media error at export.
 - Aspect changes preserve normalized layer positions, but very long text may still need manual typography adjustment for vertical layouts.
 - The advanced timeline supports selecting, reordering, and trimming, but not keyframe curves or waveform editing.
+- `npm audit` still reports five high advisories in the development-only Next.js ESLint dependency chain (`fast-glob` → `micromatch` → `braces`). The installed versions are currently the newest compatible releases; `npm audit --omit=dev` reports zero production advisories. Recheck for upstream fixes before extending the tooling.
 
 The next major improvement is an optional cloud render provider with a durable queue and persisted media library. This would enable large exports and cross-device projects without changing the scene schema.
